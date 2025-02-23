@@ -52,7 +52,8 @@ const log = (e: React.FormEvent) => {
   return (
   <div className="flex justify-center items-center h-screen bg-grey-100">
     <form className="flex flex-col gap-4 w-1/3 bg-white p-6 rounded shadow-lg">
-       <h1 className="text-2xl font-semibold text-center">LOGIN</h1>
+       <h1 className="text-2xl font-semibold text-center">
+        LOGIN</h1>
       
       <div className="flex flex-col">
         <label className=" font-medium">Email</label>

@@ -20,6 +20,7 @@ import Forgetpassword from "./pages/auth/forgetpassword";
 import Login from "./pages/auth/login";
 import RegisterPage from "./pages/auth/registerPage";
 import HomePage from "./pages/homePage";
+import ItemDetails from "./pages/itemDetails";
 
 
 const App = () => {
@@ -41,6 +42,8 @@ const App = () => {
         <Route path="/forgetpassword" element={<Forgetpassword/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/home" element={<HomePage/>} />
+        <Route path="/itemDetails" element={<ItemDetails/>} />
+
 
 
 
