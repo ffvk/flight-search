@@ -1,11 +1,11 @@
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { dataSchema, DataSchema } from "../validation/data-schema";
+// import { zodResolver } from "@hookform/resolvers/zod";
+import { dataSchema, DataSchema } from "../validators/data-schema";
 
 const EditForms = () => {
   const methods = useForm<DataSchema>({
-    resolver: zodResolver(dataSchema),
+    // resolver: zodResolver(dataSchema),
     defaultValues: {
       name: "",
       email: "",
