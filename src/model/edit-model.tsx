@@ -31,7 +31,7 @@ const EditModel = ({ data, isOpen, onClose }: ModalProps) => {
         onClick={(e) => e.stopPropagation()}
       >
         <h1 className="text-xl font-bold mb-4">EDIT</h1>
-      <EditForms />
+      <EditForms data={data}  isOpen={isOpen} onClose={onClose} />
        
       </div>
       <ToastContainer />

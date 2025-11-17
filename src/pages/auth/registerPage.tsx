@@ -42,55 +42,78 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen bg-gray-100">
-      <form className="flex flex-col gap-4 w-1/3 bg-white p-6 rounded shadow-lg" onSubmit={handleSubmit}>
-      <h1 className="text-2xl font-semibold text-center">Page</h1>
-        <input
-          type="text"
-          className="w-full border p-2 rounded"
-          placeholder="Enter first name"
-          value={firstname}
-          onChange={(e) => setFirstname(e.target.value)}
-        />
-        {errors.firstname && <p className="text-red-500">{errors.firstname[0]}</p>}
+    <div>
+      <div className="flex flex-col justify-center items-center h-screen bg-emerald-900 ">
+        <form
+          className="flex flex-col gap-4 w-1/3 bg-emerald-700 p-6 rounded-2xl shadow-lg "
+          onSubmit={handleSubmit}
+        >
+          <h1 className="text-3xl  text-center font-serif text-white ">
+            Create account
+          </h1>
+          <input
+            type="text"
+            className="w-full pl-10 pr-4 py-2 border-2 rounded-full  focus:ring-accent focus:border-accent outline-none bg-transparent border-white"
+            placeholder="Enter first name"
+            value={firstname}
+            onChange={(e) => setFirstname(e.target.value)}
+          />
+          {errors.firstname && (
+            <p className="text-red-500">{errors.firstname[0]}</p>
+          )}
 
-        <input
-          type="text"
-          className="w-full border p-2 rounded"
-          placeholder="Enter last name"
-          value={lastname}
-          onChange={(e) => setLastname(e.target.value)}
-        />
-        {errors.lastname && <p className="text-red-500">{errors.lastname[0]}</p>}
+          <input
+            type="text"
+            className="w-full pl-10 pr-4 py-2 border-2 rounded-full  focus:ring-accent focus:border-accent outline-none bg-transparent border-white"
+            placeholder="Enter last name"
+            value={lastname}
+            onChange={(e) => setLastname(e.target.value)}
+          />
+          {errors.lastname && (
+            <p className="text-red-500">{errors.lastname[0]}</p>
+          )}
 
-        <input
-          type="email"
-          className="w-full border p-2 rounded"
-          placeholder="Enter email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        {errors.email && <p className="text-red-500">{errors.email[0]}</p>}
+          <input
+            type="email"
+            className="w-full pl-10 pr-4 py-2 border-2 rounded-full  focus:ring-accent focus:border-accent outline-none bg-transparent border-white"
+            placeholder="Enter email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          {errors.email && <p className="text-red-500">{errors.email[0]}</p>}
 
-        <input
-          type="password"
-          className="w-full border p-2 rounded"
-          placeholder="Enter password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        {errors.password && <p className="text-red-500">{errors.password[0]}</p>}
-<div className="flex justify-center">
-<Link className="text-blue-500 cursor-pointer hover:underline" to="/login">--LOGIN--</Link>
+          <input
+            type="password"
+            className="w-full pl-10 pr-4 py-2 border-2 rounded-full  focus:ring-accent focus:border-accent outline-none bg-transparent border-white"
+            placeholder="Enter password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          {errors.password && (
+            <p className="text-red-500">{errors.password[0]}</p>
+          )}
 
-</div>
-        <button type="submit" className="border p-2 rounded bg-blue-500 text-white hover:bg-blue-700">
-          Submit
-        </button>
-      </form>
-      <ToastContainer />
+          <button
+            type="submit"
+            className="w-1/3 bg-white border text-dark py-2 
+            rounded-full transition-all 
+            disabled:bg-gray-400 place-self-center font-semibold"
+          >
+            Sign up
+          </button>
+          <div className="flex justify-center">
+            <p>Already have an account?</p>
+            <Link
+              className="text-white cursor-pointer hover:underline ml-2"
+              to="/"
+            >
+              Login
+            </Link>
+          </div>
+        </form>
+        <ToastContainer />
+      </div>
     </div>
-    
   );
 };
 
